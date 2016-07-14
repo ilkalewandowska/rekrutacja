@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+	<link href="../assets/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="../assets/plugins/bootstrap-datetimepicker-master/build/css/bootstrap-datetimepicker.min.css">
+	<link rel="stylesheet" type="text/css" href="../assets/plugins/selectize-master/dist/css/selectize.css">
+	<link rel="stylesheet" type="text/css" href="../assets/plugins/selectize-master/dist/css/selectize.bootstrap3.css">
+	<link href="../assets/css/styles.css" rel="stylesheet">
+  </head>
+  <body>
+	<form role="form">
+			<div class="container">
+			<h1 class="text-center">my profile</h1>
+				<div class="col-md-6 col-left">
+					<h3 class="row text-center">personal details</h3>
+					<div class="row">
+						<div class="col-md-6 form-group">
+							<div class="center-block">
+								<img id="user_av" src="../assets/images/avatar.jpg" width="130px" alt="Image not found" />
+								<input id="upload-av" type="file" class="file" data-preview-file-type="image" />
+							</div>
+						</div>
+						<div class="col-md-6 form-group">
+							<div class="center-block">
+								<label>name</label>
+								<span>John Snow</span>
+								
+								<label>PPSN</label>
+								<span>1234567A</span>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6 form-group">
+								<div class="control-group">
+									<label for="datetimepicker1">date of birth</label>
+										<span>
+											17/08/1984
+										</span>
+								</div>
+							
+						</div>
+					</div>	
+				</div>
+				<div class="col-md-6 col-right">
+					<h3 class="text-center">contact details</h3>
+					<div class="col-md-12 form-group">
+						<div class="center-block">
+							<label>email adress</label>
+							<input type="email" class="form-control" id="email">
+						</div>
+					</div>
+					<div class="col-md-6 form-group">
+						<label>mobile number</label>
+							<input type="number" class="form-control" id="mobile_number">
+					</div>
+					<div class="col-md-6 form-group">
+						<label>second number</label>
+							<input type="number" class="form-control" id="second_number">
+					</div>
+					
+					<div class="col-md-12 form-group">
+						<label>postal address</label>
+							<textarea type="number" class="form-control" id="postal_address"></textarea>
+					</div>
+					<div class="col-xs-12"><button class="btn-success btn-lg pull-right" type="button" onclick="getPage2()"><i class="fa fa-pencil" aria-hidden="true"></i>&nbsp;&nbsp;save contact details</button></div>
+				</div>
+			</div>
+	</form>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../assets/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../assets/plugins/moment-develop/moment.js"></script>
+	<script type="text/javascript" src="../assets/plugins/bootstrap-datetimepicker-master/build/js/bootstrap-datetimepicker.min.js"></script>
+	<script type="text/javascript" src="../assets/plugins/selectize-master/dist/js/standalone/selectize.js"></script>
+	<script>
+
+			$('#car-makes').change(function(){
+				$('#car-models option[value!="'+$(this).val()+'"]').hide()
+			});
+
+	</script>
+	<script type="text/javascript">
+		 $(function () {
+                $('#datetimepicker8').datetimepicker();
+        });
+		$(function () {
+			$('#datetimepicker6').datetimepicker();
+			$('#datetimepicker7').datetimepicker({
+				useCurrent: false //Important! See issue #1075
+			});
+			$("#datetimepicker6").on("dp.change", function (e) {
+				$('#datetimepicker7').data("DateTimePicker").minDate(e.date);
+			});
+			$("#datetimepicker7").on("dp.change", function (e) {
+				$('#datetimepicker6').data("DateTimePicker").maxDate(e.date);
+			});
+		});
+
+		$('#select-city').selectize({
+			create: true,
+			sortField: 'text',
+			persist: true,
+			openOnFocus: true,
+		});
+		
+	</script>
+
+	<script>
+			function conf() {
+			 confirm("Are you sure?");
+		}
+		</script>
+
+	
+  </body>
+</html>

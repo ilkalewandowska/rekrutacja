@@ -1,0 +1,234 @@
+$darkviolet: #3a2977;
+$lightviolet: #674ea7;
+$lightocean: #0e7190;
+$darkocean: #134f5c;
+$lightgrey: #999;
+$darkgrey: #333;
+@import url(https://fonts.googleapis.com/css?family=Muli);
+
+body{
+	font-family: 'Muli', sans-serif;
+	
+	.no-padding{
+		padding: 0;
+	}
+	.no-margin{
+		margin: 0;
+	}
+	.flexbox{
+		display:flex;
+		justify-content: center;
+	}
+
+	#header{
+		width: 100%;
+		#logo, #log_out{
+			background-color: $darkviolet;
+			min-height: 150px;
+			
+				.fa-power-off{
+					font-size: 4em!important;
+					color: #fafafa;
+				}
+		}
+		#mid_header{
+			background-color: $lightocean;
+			min-height: 150px;
+		}
+		h1, h2, h3, h4, h5, h6, span, p{
+			color: #fafafa;
+			
+		}
+		.flexbox{
+			flex-wrap: wrap;
+			flex-direction: column;
+		}
+	}
+
+	#navigation{
+		height: 600px;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		margin-top: 20%;
+		
+		
+		.nav{
+			border: 1px solid #111;
+			float: right;
+			width: 200px;
+			/*width: 100%;*/
+
+			li {
+				position: relative;
+				display: block;
+				width: 100%;
+				float: none;
+				clear: both;
+				
+				button, a{
+					text-align: left;
+					color: #fafafa;
+					background-color: $darkgrey;
+					width: 100%;
+					border-width: 1px;
+					border-color: #111;
+					padding: 10px 5px 10px 15px;
+					
+					&:focus, &:active, .nav .open>a{
+					background-color: $lightviolet!important;
+					border:2px solid $darkviolet;
+					color: #fafafa;
+					}
+					&:hover {
+					background-color: $lightocean!important;
+					border: 1px solid $darkocean;
+					color: #fafafa;
+					}
+				}
+				
+				&:first-child a{
+					border-width: 1px;
+				}
+				
+				&:last-child a{
+					border-width: 1px;
+					background-color: $darkocean;
+					border: 2px solid $darkocean;
+				}
+				
+				.dropdown-menu {
+					position: relative;
+					border: 0;
+					border-radius: 0;
+					box-shadow: none;
+					background-color: transparent;
+					margin: 0;
+					padding: 0;
+					width: 100%;
+					
+					li {
+						button{
+							text-align: left;
+							color: #fafafa;
+							background-color: $lightgrey;
+							width: 100%;
+							border-width: 1px;
+							border-color: #111;
+							padding: 10px 5px 10px 15px;
+						}
+					}
+					&#dropdown-info li{
+						padding: 10px;
+					}
+				}
+			}
+			.open>a, .open>a:focus{
+				background-color: $lightviolet;
+				border: 1px solid $darkviolet;
+			}
+			.open>a:hover{
+				background-color: $darkocean;
+				border: 1px solid $darkocean;
+			}
+		}
+	}
+	h1{
+		background-color: lightgrey;
+	}
+	h1, h2, h3, h4, h5, h6, label, button{
+		text-transform: capitalize;
+	}
+	.btn-lg{
+		border-radius: 0;
+	}
+	.fa, label{
+		font-size:1.5em!important;
+	}
+
+	label{
+		display: block;
+		clear: both;
+		padding-top: 1em;
+	}
+	input, select, option, .form-control, .selectize-input{
+		min-width: 8rem;
+		height: 34px;
+		max-width: 100%;
+		padding: 6px 12px;
+		line-height: 1.2rem;
+		border: 1px solid $lightgrey;
+		border-radius: 0;
+		max-height: 100%!important;
+		
+			&:hover{
+				border: 1px solid $darkgrey;
+			}
+	}
+	.selectize-input{
+		input{
+		height: 20px;
+		}
+	}
+	#upload-av{
+		border: 0;
+		padding-left: 0;
+	}
+	.col-md-2.flexbox{
+		align-items: center;
+		height: 80px;
+	}
+	@media screen and (min-width: 1024px){
+		.col-left{
+			border-right: 1px solid $lightgrey;
+			min-height: 500px;
+			height: auto;
+		}
+		.col-right{
+			border-left: 1px solid $lightgrey;
+			min-height: 500px;
+			height: auto;
+		}
+	}
+	.col-down{
+		border-top: 2px solid $lightgrey;
+	}
+	.purple-link{
+			transform: rotate(-45deg);
+			font-size: 4em !important;
+			color: #674ea7;
+			position: absolute;
+			margin: -26px 0 0 -26px;
+			text-shadow: 3px 2px 1px #674ea7
+	}
+	.checkbox, .checkbox-inline, .radio, .radio-inline {
+		.input[type=checkbox], input[type=checkbox], input[type=radio], input[type=radio] {
+			position: absolute;
+			margin-left: -45px;
+			margin-top: -2px;
+		}
+		span{
+			margin-left: 1em;
+		}
+	}
+	.fa-long-arrow-right{
+		transform: scale(2,1);
+		color: $lightgrey;
+	}
+
+	#footer{
+		background-color: $lightgrey;
+		padding: 0 2em;
+		height: 2.3em;
+		margin-top: 2em;
+		margin-bottom: 2em;
+		
+		.btn-link{
+			margin-top: 5px;
+			color: #fafafa;
+			text-decoration: underline;
+		}
+	}
+}
+
+
